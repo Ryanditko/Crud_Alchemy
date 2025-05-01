@@ -24,5 +24,3 @@ Para executar o projeto, é necessário ter um banco de dados MSSQL configurado 
 Para instalar as dependências do projeto, execute `pip install -r requirements.txt`.
 
 Para executar o projeto, execute `python main.py`.
-
-Este projeto foi desenvolvido por [seu nome] em [data de conclusão].
