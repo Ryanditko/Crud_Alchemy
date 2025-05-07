@@ -27,7 +27,7 @@ class CRUD:
         if isbn:
             # Consulta não é executada até chamar .first() (ou .all(), .one(), etc.)
             # Lazy evaluation: A construção da query é separada da execução
-            return self.__session.query(Livro).filter(Livro.isbn == isbn)
+            return self.__session.query(Livro).filter(Livro.isbn == isbn).first()
         # .filter(...) → adiciona condições (WHERE no SQL)
         # session.query(Livro) → seleciona a tabela Livro
         else: 
