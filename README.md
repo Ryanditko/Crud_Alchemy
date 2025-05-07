@@ -5,8 +5,6 @@ Este projeto foi desenvolvido para demonstrar operações CRUD (Create, Read, Up
 Estrutura do Projeto:
 - `main.py`: Este arquivo contém o código principal do projeto. Ele estabelece a conexão com o banco de dados, cria uma sessão e demonstra as operações CRUD em um modelo de dados de Livro.
 
-- `alchemy.py`: Este arquivo define a estrutura do banco de dados e as classes de modelo de dados usando a biblioteca SQLAlchemy.
-
 - `crud.py`: Este arquivo contém a classe `CRUD` que encapsula as operações CRUD em um objeto de sessão SQLAlchemy.
 
 - `script.sql`: Este arquivo contém o script SQL para criar a tabela Livro no banco de dados.
