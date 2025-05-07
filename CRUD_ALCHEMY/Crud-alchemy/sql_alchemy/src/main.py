@@ -33,16 +33,17 @@ try:
     ano_publicacao=2016,
     genero="Programação",
 )
+    print('Livro cadastrado com sucesso!')
 except Exception as error:
-    print("erro de criacao")
+    print('Erro ao cadastrar!', error)
 
 # %%
 # Lendo registros como lista de objetos
 try: 
     livro = livro_crud.read("9788521630814")
-    print('Livro identificado')
+    print('Livro identificado: ', livro.titulo)
 except Exception as error:
-    print('Livro não cadastrado') 
+    print('Livro não cadastrado!', error) 
 # %%
 # atualizando um registro
 
@@ -52,15 +53,18 @@ try:
         titulo="Introdução à Computação Usando Python - Um Foco no Desenvolvimento de Aplicações",
         ano_publicacao=2021,
     )
+    print('Livro atualizado com sucesso!')
 except Exception as error:
-    print('Erro de update')
+    print('Erro de atualização!', error)
     
 # %%
 # removendo um registro
 try:
     livro_crud.delete(isbn="9788521630814")
+    print('Livro removido com sucesso!')
 except Exception as error:
-    print(f"Erro ao deletar livro: {error}") 
+    print('Erro ao remover livro!', error)
+
 # %%
 # encerrando a sessão com o banco de dados
 session.close()
