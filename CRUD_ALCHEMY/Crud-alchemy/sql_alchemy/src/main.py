@@ -36,6 +36,7 @@ try:
     print('Livro cadastrado com sucesso!')
 except Exception as error:
     print('Erro ao cadastrar!', error)
+     session.rollback() 
 
 # %%
 # Lendo registros como lista de objetos
@@ -43,7 +44,7 @@ try:
     livro = livro_crud.read("9788521630814")
     print('Livro identificado: ', livro.titulo)
 except Exception as error:
-    print('Livro não cadastrado!', error) 
+    print('Livro não cadastrado!', error)
 # %%
 # atualizando um registro
 
@@ -56,6 +57,7 @@ try:
     print('Livro atualizado com sucesso!')
 except Exception as error:
     print('Erro de atualização!', error)
+    session.rollback() 
     
 # %%
 # removendo um registro
@@ -64,6 +66,7 @@ try:
     print('Livro removido com sucesso!')
 except Exception as error:
     print('Erro ao remover livro!', error)
+     session.rollback() 
 
 # %%
 # encerrando a sessão com o banco de dados
